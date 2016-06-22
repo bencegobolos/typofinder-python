@@ -1,0 +1,189 @@
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/funcs_libgcc.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mapfile_xml.tex
+Unknown word: 'objet'. Did you mean: 'object'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/inline_asm.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/make.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/implementation_defined_behaviour.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/gcov.tex
+Unknown word: 'inlineable'. Did you mean: 'inlinable'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/builtin.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/compilerdriver.tex
+Unknown word: 'vercion'. Did you mean: 'version'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/introduction.tex
+Unknown word: 'programm'. Did you mean: 'program'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/implementation.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/main_gcc_ug.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mapfile_extended.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/linker.tex
+Unknown word: 'relocateable'. Did you mean: 'relocatable'?
+Unknown word: 'exectution'. Did you mean: 'execution'?
+Unknown word: 'mebedded'. Did you mean: 'embedded'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/inline_asm-gl.tex
+Unknown word: 'contraint'. Did you mean: 'constraint'?
+Unknown word: 'optimise'. Did you mean: 'optimize'?
+Unknown word: 'optimised'. Did you mean: 'optimized'?
+Unknown word: 'varable'. Did you mean: 'variable'?
+Unknown word: 'stamement'. Did you mean: 'statement'?
+Unknown word: 'integrste'. Did you mean: 'integrate'?
+Unknown word: 'seperate'. Did you mean: 'separate'?
+Unknown word: 'optimising'. Did you mean: 'optimizing'?
+Unknown word: 'bacause'. Did you mean: 'because'?
+Unknown word: 'assemler'. Did you mean: 'assembler'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/user_settings.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/warningsfilter.tex
+Unknown word: 'warnungfilter'. Did you mean: 'warningsfilter'?
+Unknown word: 'librairies'. Did you mean: 'libraries'?
+Unknown word: 'sript'. Did you mean: 'script'?
+Unknown word: 'extention'. Did you mean: 'extension'?
+Unknown word: 'ommited'. Did you mean: 'limited'?
+Unknown word: 'warnungsfilter'. Did you mean: 'warningsfilter'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/compiler.tex
+Unknown word: 'meanfull'. Did you mean: 'manfully'?
+Unknown word: 'comiler'. Did you mean: 'compiler'?
+Unknown word: 'inital'. Did you mean: 'initial'?
+Unknown word: 'bounaries'. Did you mean: 'boundaries'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/appendices.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/preprocessor.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/linker_description_file.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/sampleprogram.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/gcc_inline_fcn.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/motd.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/software_installation.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/linker_multicore.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/binutils.tex
+Unknown word: 'aranges'. Did you mean: 'ranges'?
+Unknown word: 'sendd'. Did you mean: 'send'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/specs.tex
+Unknown word: 'substitutedfor'. Suggestion is not available.
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/debugger.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/components.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/attributes.tex
+Unknown word: 'fardara'. Did you mean: 'fardata'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/vared.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/libraries.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/assembler.tex
+Unknown word: 'deflt'. Did you mean: 'dealt'?
+Unknown word: 'relocatably'. Did you mean: 'relocatable'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/inline_fcn.tex
+Unknown word: 'programm'. Did you mean: 'program'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/gnu.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mapfile.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/implement_issue.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/intrinsic.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/softwareoverview.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/installation.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/binutils_tools.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/tables/tricore_tab_extmap.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/tables/xml_tab_extmap.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/tables/arm_tab_datatypes.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/tables/tricore_ins_privileges.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/tables/tricore_pcp_instruction_set.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/tables/msp430_tab_datatypes.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/tables/tricore_tab_datatypes.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/tables/tab_extensions.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/tables/powerpc_tab_datatypes.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/tables/tricore_ins_constraints.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/tables/tab_conventions.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/tables/const_inlineasm.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/tables/tricore_errata.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/tables/c16x_tab_datatypes.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/cc1opt.tex
+Unknown word: 'opion'. Did you mean: 'option'?
+Unknown word: 'bounaries'. Did you mean: 'boundaries'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/longcall.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/helloserial.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/circ_addressing.tex
+Unknown word: 'initialising'. Did you mean: 'initializing'?
+Unknown word: 'initialises'. Did you mean: 'initializes'?
+Unknown word: 'initialised'. Did you mean: 'initialized'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/intrinsic_fcn.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/libs.tex
+Unknown word: 'wronly'. Did you mean: 'wrongly'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/special_features.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/traps.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/rel_address.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/cc1_default_options.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/csa_overhead.tex
+Unknown word: 'addtional'. Did you mean: 'additional'?
+Unknown word: 'intructions'. Did you mean: 'instructions'?
+Unknown word: 'optimising'. Did you mean: 'optimizing'?
+Unknown word: 'optimised'. Did you mean: 'optimized'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/sections.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/interrupts.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/startup.tex
+Unknown word: 'initialising'. Did you mean: 'initializing'?
+Unknown word: 'initialisation'. Did you mean: 'initialization'?
+Unknown word: 'parenthesise'. Did you mean: 'parentheses'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/version_info.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/gascmd_md_opt.tex
+Unknown word: 'misbehaviour'. Did you mean: 'misbehavior'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/memory_x_script.tex
+Unknown word: 'overidden'. Did you mean: 'overridden'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/mapfile_ext.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/target_attributes.tex
+Unknown word: 'priviledged'. Did you mean: 'privileged'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/tricore_versioninfo_example.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/cpp_default_options.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/flashtool.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/gas_md_direct.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/constraints.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/mapfile_ge.tex
+Unknown word: 'geschrieben'. Did you mean: 'beschrieben'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/derivative_specs.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/pcp.tex
+Unknown word: 'intruction'. Did you mean: 'instruction'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/simd.tex
+Unknown word: 'memonic'. Did you mean: 'mnemonic'?
+Unknown word: 'optimising'. Did you mean: 'optimizing'?
+Unknown word: 'optimise'. Did you mean: 'optimize'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/errata.tex
+Unknown word: 'optimise'. Did you mean: 'optimize'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/tricore/headers.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/ppc/cc1opt.tex
+Unknown word: 'porecessing'. Did you mean: 'processing'?
+Unknown word: 'dependences'. Did you mean: 'dependencies'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/ppc/sda_pointer.tex
+Unknown word: 'regsiters'. Did you mean: 'registers'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/ppc/longcall.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/ppc/intrinsic_fcn.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/ppc/libs.tex
+Unknown word: 'wronly'. Did you mean: 'wrongly'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/ppc/special_features.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/ppc/cc1_default_options.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/ppc/sections.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/ppc/interrupts.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/ppc/startup.tex
+Unknown word: 'initialising'. Did you mean: 'initializing'?
+Unknown word: 'initialisation'. Did you mean: 'initialization'?
+Unknown word: 'parenthesise'. Did you mean: 'parentheses'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/ppc/powerpc_versioninfo_example.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/ppc/gascmd_md_opt.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/ppc/mapfile_ext.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/ppc/target_attributes.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/ppc/cpp_default_options.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/ppc/gas_md_direct.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/ppc/constraints.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/arm-elf/cc1opt.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/arm-elf/libs.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/arm-elf/special_features.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/arm-elf/cc1_default_options.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/arm-elf/sections.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/arm-elf/target_attributes.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/arm-elf/cpp_default_options.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/arm-elf/constraints.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/common/msmall_const.tex
+Unknown word: 'objetcs'. Did you mean: 'objects'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/common/const_in_rodata.tex
+Unknown word: 'uninitialised'. Did you mean: 'uninitialized'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/common/pic.tex
+Unknown word: 'initialised'. Did you mean: 'initialized'?
+Unknown word: 'initialisation'. Did you mean: 'initialization'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/common/config_default_sec.tex
+Unknown word: 'initialised'. Did you mean: 'initialized'?
+Unknown word: 'uninitialised'. Did you mean: 'uninitialized'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/common/mcs.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/common/pid.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/common/variable_attributes.tex
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/common/pragma_sec.tex
+Unknown word: 'mergable'. Did you mean: 'mergeable'?
+Executing 'corrector.py' on file: /mnt/hth/all-repos/users-guide/usersguide/mcu/common/function_attributes.tex
