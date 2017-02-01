@@ -78,17 +78,14 @@ def validate_arguments(args):
       * False: if input arguments would cause an error in the program.
       * True: otherwise.
     """
-    if not os.path.exists(args.dictionary):
-        _log.error('Dictionary does not exists: \'%s\'' % args.dictionary)
-        return False
+    if args.train is not None:
+        if not os.path.exists(args.train):
+            _log.error('File does not exists: \'%s\'' % args.train)
+            return False
 
-    if args.train is not None and not os.path.exists(args.train):
-        _log.error('File does not exists: \'%s\'' % args.train)
-        return False
-
-    if not os.path.isdir(args.input) and not is_text_file(args.train):
-        _log.error('File is not a simple text file: \'%s\'' % args.train)
-        return False
+        if not is_text_file(args.train):
+            _log.error('File is not a simple text file: \'%s\'' % args.train)
+            return False
 
     if not args.add and not args.delete and not args.train:
         _log.warning('No operation has been executed on dictionary: \'%s\'' % args.dictionary)
