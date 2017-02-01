@@ -26,6 +26,9 @@ class Linguist(object):
 
         self._dictionary = collections.defaultdict()
 
+    def get_dictionary(self):
+        return self._dictionary
+
     def train_dictionary(self, word_list):
         """
         Updates the dictionary by
@@ -94,8 +97,12 @@ class Linguist(object):
             _log.error('Dictionary does not exists: \'%s\'' % dictionary_file_path)
             return
 
-        with open(dictionary_file_path, 'r') as f:
-            self._dictionary = json.load(f)
+        try:
+            with open(dictionary_file_path, 'r') as f:
+                self._dictionary = json.load(f)
+        except (ValueError, IOError):
+            _log.error("Given path is not a dictionary: \'%s\'" % dictionary_file_path)
+            return
 
         _log.info("Dictionary has been loaded: \'%s\'" % dictionary_file_path)
 

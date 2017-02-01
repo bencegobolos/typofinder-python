@@ -28,7 +28,7 @@ class Typofinder(object):
         Prints a file's typos and suggestions for misspelled words in a table format.
         """
         if not self._result_map:
-            _log.info("Result map is empty.")
+            _log.debug("Result map is empty.")
             return
 
         print("\n" + "+" * 72)
@@ -48,7 +48,7 @@ class Typofinder(object):
         """
 
         if not self._result_map:
-            _log.info("Result map is empty.")
+            _log.debug("Result map is empty.")
             return
 
         content = file(self._text_file_path).readlines()
@@ -87,6 +87,10 @@ class Typofinder(object):
         Checks a file for typos and makes suggestions based on the Linguist.
         The typofinder's result map will contain the unknown words and a suggestion for fix if possible.
         """
+        if not self._linguist.get_dictionary():
+            _log.error("Linguist's dictionary is empty. Couldn't recognize typos in file(s).")
+            return
+
         content = set(get_words(file(self._text_file_path).read()))
         difference = self._linguist.not_known(content)
 
