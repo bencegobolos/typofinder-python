@@ -75,12 +75,14 @@ class Linguist(object):
             return
 
         if os.path.exists(dictionary_file_path):
-            _log.info("Dictionary will be overwritten: \'%s\'" % self._dictionary)
+            _log.info("Dictionary will be overwritten: \'%s\'" % dictionary_file_path)
+        else:
+            _log.info("Dictionary will be created: \'%s\'" % dictionary_file_path)
 
         with open(dictionary_file_path, 'w') as f:
             json.dump(self._dictionary, f, sort_keys=True, indent=2, separators=(',', ': '))
 
-        _log.info("Dictionary has been saved: \'%s\'" % self._dictionary)
+        _log.info("Dictionary has been saved: \'%s\'" % dictionary_file_path)
 
     def load_dictionary_from_json(self, dictionary_file_path):
         """

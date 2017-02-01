@@ -83,6 +83,10 @@ def validate_arguments(args):
             _log.error('File does not exists: \'%s\'' % args.train)
             return False
 
+        if os.path.isdir(args.train):
+            _log.error("Given path is a directory: \'%s\'" % args.train)
+            return False
+
         if not is_text_file(args.train):
             _log.error('File is not a simple text file: \'%s\'' % args.train)
             return False
@@ -111,15 +115,11 @@ def main():
     if args.train is not None:
         text_file_path = args.train
         linguist.train_dictionary(get_words(file(text_file_path).read()))
-        if not is_dictionary_exist:
-            _log.info("New dictionary file has been created: \'%s\'" % dictionary_file_path)
         is_dictionary_exist = True
 
     if args.add is not None:
         add_word_list = [word.lower() for word in args.add]
         linguist.train_dictionary(add_word_list)
-        if not is_dictionary_exist:
-            _log.info("New dictionary file has been created: \'%s\'" % dictionary_file_path)
         is_dictionary_exist = True
 
     if args.delete is not None:
