@@ -56,23 +56,25 @@ def is_text_file(file_path, block_size=512):
     return float(len(non_text)) / len(block) <= 0.30
 
 
-def find_file_abs_paths(directory_path, filter_for_ext=None):
+def find_text_file_abs_paths(directory_path, filter_for_ext=None):
     """
     Finds absolute paths of files in directory_path. Filter for specific extensions.
 
     :param directory_path: recursively searched for files.
     :param filter_for_ext: files with these extensions will be collected only. No filtering by default.
-    :return: list of absolute paths of files found in directory_path.
+    :return: list of absolute paths of simple text files found in directory_path.
     """
     text_file_paths = []
     extensions = ''
 
+    # If filter_for_ext is given it must be converted to a tuple because of the .endswith() function.
+    if filter_for_ext:
+        extensions = tuple(filter_for_ext)
+
     for root, directories, files in os.walk(directory_path):
         for file_name in files:
             file_path = os.path.join(os.path.abspath(root), file_name)
-            if filter_for_ext:
-                extensions = tuple(filter_for_ext)
-            if file_path.endswith(extensions):
+            if file_path.endswith(extensions) and is_text_file(file_path):
                 text_file_paths.append(file_path)
 
     return text_file_paths

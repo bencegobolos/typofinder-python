@@ -87,6 +87,8 @@ class Typofinder(object):
         Checks a file for typos and makes suggestions based on the Linguist.
         The typofinder's result map will contain the unknown words and a suggestion for fix if possible.
         """
+        _log.info("Executing typofinder on \'%s\'" % self._text_file_path)
+
         if not self._linguist.get_dictionary():
             _log.error("Linguist's dictionary is empty. Couldn't recognize typos in file(s).")
             return

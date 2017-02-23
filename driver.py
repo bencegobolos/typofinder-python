@@ -13,7 +13,7 @@ import textwrap
 
 from src.typofinder import Typofinder
 from src.linguist import Linguist
-from src.utils import find_file_abs_paths, is_text_file
+from src.utils import find_text_file_abs_paths, is_text_file
 
 logging.basicConfig(format='[%(asctime)s][%(levelname)8s][%(name)s]: %(message)s')
 _root_log = logging.getLogger("typofinder")
@@ -87,10 +87,7 @@ def validate_arguments(args):
         return False
 
     if os.path.isdir(args.input):
-        text_file_paths = find_file_abs_paths(args.input, args.ext)
-        for file_path in text_file_paths:
-            if not is_text_file(file_path):
-                text_file_paths.remove(file_path)
+        text_file_paths = find_text_file_abs_paths(args.input, args.ext)
         if not text_file_paths:
             if args.ext:
                 _log.error("No simple text file were found with the extension(s) %s in directory: \'%s\'"
@@ -116,7 +113,7 @@ def main():
     linguist.load_dictionary_from_json(args.dictionary)
 
     if os.path.isdir(args.input):
-        file_path_list = find_file_abs_paths(args.input, args.ext)
+        file_path_list = find_text_file_abs_paths(args.input, args.ext)
     else:
         file_path_list = [args.input]
 
