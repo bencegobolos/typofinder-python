@@ -60,7 +60,8 @@ def get_arguments():
     parser.add_argument('-d', '--dictionary',
                         help='define a dictionary (in .json format) which contains '
                              'the known words (\'htc-dictionary.json\' is given by default).',
-                        type=str, default='htc-dictionary.json', metavar='DICTIONARY_FILE')
+                        type=str, default=os.path.join(os.path.dirname(__file__), 'htc-dictionary.json'),
+                        metavar='DICTIONARY_FILE')
     parser.add_argument('input', help='A file or a directory you want to check.',
                         metavar='INPUT')
 
