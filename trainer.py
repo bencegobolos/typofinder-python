@@ -57,7 +57,8 @@ def get_arguments():
     parser.add_argument('-d', '--dictionary',
                         help='define the dictionary (in .json format) you want to update which contains '
                              'the known words (\'htc-dictionary.json\' is given by default).',
-                        type=str, default='htc-dictionary.json', metavar='DICTIONARY_FILE')
+                        type=str, default=os.path.join(os.path.dirname(__file__), 'htc-dictionary.json'),
+                        metavar='DICTIONARY_FILE')
     parser.add_argument('--add',
                         help='add new word(s) or increase the likelihood of suggestion.',
                         nargs='*', metavar='WORD')
