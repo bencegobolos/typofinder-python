@@ -13,7 +13,7 @@ import logging
 import textwrap
 
 from src.linguist import Linguist
-from src.utils import get_words, is_text_file
+from src.utils import get_words, is_text_file, find_text_file_abs_paths
 
 logging.basicConfig(format='[%(asctime)s][%(levelname)8s][%(name)s]: %(message)s')
 _root_log = logging.getLogger("typofinder")
@@ -68,6 +68,13 @@ def get_arguments():
     parser.add_argument('-t', '--train',
                         help='train dictionary from a file (add every word).',
                         type=str, metavar='TEXT_FILE')
+    parser.add_argument('-e', '--ext',
+                        help='filter for extensions if input argument is a directory.',
+                        action='append', metavar='EXTENSION_TYPE')
+    parser.add_argument('--dry-run',
+                        help='see the difference between the old and new version of dictionary '
+                             'without actually modifying the dictionary.',
+                        action='store_true')
 
     return parser.parse_args()
 
@@ -79,18 +86,28 @@ def validate_arguments(args):
       * False: if input arguments would cause an error in the program.
       * True: otherwise.
     """
-    if args.train is not None:
+    if args.train:
         if not os.path.exists(args.train):
             _log.error('File does not exists: \'%s\'' % args.train)
             return False
 
-        if os.path.isdir(args.train):
-            _log.error("Given path is a directory: \'%s\'" % args.train)
-            return False
-
-        if not is_text_file(args.train):
+        if not os.path.isdir(args.train) and not is_text_file(args.train):
             _log.error('File is not a simple text file: \'%s\'' % args.train)
             return False
+
+        if os.path.isdir(args.train):
+            text_file_paths = find_text_file_abs_paths(args.train, args.ext)
+            if not text_file_paths:
+                if args.ext:
+                    _log.error("No simple text file were found with the extension(s) %s in directory: \'%s\'"
+                               % (args.ext, args.train))
+                else:
+                    _log.error("No simple text file were found in directory: \'%s\'" % args.train)
+                return False
+
+        if args.ext and '' in args.ext and os.path.isdir(args.train):
+            _log.warning('Giving an empty string in extensions will ignore other extension filters. '
+                         'The script operates on default: find every simple text file in folder: \'%s\'' % args.train)
 
     if not args.add and not args.delete and not args.train:
         _log.warning('No operation has been executed on dictionary: \'%s\'' % args.dictionary)
@@ -106,31 +123,47 @@ def main():
         sys.exit(1)
 
     dictionary_file_path = args.dictionary
-    is_dictionary_exist = os.path.exists(dictionary_file_path)
 
     linguist = Linguist()
 
-    if is_dictionary_exist:
+    if os.path.exists(dictionary_file_path):
         linguist.load_dictionary_from_json(dictionary_file_path)
 
-    if args.train is not None:
+    if args.train:
         text_file_path = args.train
-        linguist.train_dictionary(get_words(file(text_file_path).read()))
-        is_dictionary_exist = True
 
-    if args.add is not None:
+        if os.path.isdir(text_file_path):
+            file_path_list = find_text_file_abs_paths(text_file_path, args.ext)
+        else:
+            file_path_list = [text_file_path]
+
+        for file_path in file_path_list:
+            linguist.train_dictionary(get_words(file(file_path).read()))
+
+    if args.add:
         add_word_list = [word.lower() for word in args.add]
         linguist.train_dictionary(add_word_list)
-        is_dictionary_exist = True
 
-    if args.delete is not None:
+    if args.delete:
         delete_word_set = set(word.lower() for word in args.delete)
-        if not is_dictionary_exist:
+        if not linguist.get_dictionary():
             _log.error("Could not delete from \'%s\': Dictionary does not exists." % dictionary_file_path)
             sys.exit(1)
         linguist.delete_from_dictionary(delete_word_set)
 
-    linguist.save_dictionary_to_json(dictionary_file_path)
+    if args.dry_run:
+        linguist_old = Linguist()
+        if os.path.exists(dictionary_file_path):
+            linguist_old.load_dictionary_from_json(dictionary_file_path)
+
+        added_words = linguist_old.not_known(set(linguist.get_dictionary()))
+
+        if added_words:
+            print("New words to \'%s\': %s." % (dictionary_file_path, ', '.join(added_words)))
+
+        _log.info("No new words would be added to \'%s\'" % dictionary_file_path)
+    else:
+        linguist.save_dictionary_to_json(dictionary_file_path)
 
 
 if __name__ == "__main__":

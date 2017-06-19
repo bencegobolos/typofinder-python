@@ -32,10 +32,10 @@ class Typofinder(object):
             return
 
         print("\n" + "+" * 72)
-        print("{0:33} ==> {1:>33}".format("Typo", "Suggestion"))
+        print("{0:33} ==> {1:>33}".format("Unknown word", "Suggestion"))
         print("-" * 72)
-        for word, suggestion in self._result_map.items():
-            if suggestion is not None:
+        for word, suggestion in sorted(self._result_map.items()):
+            if suggestion:
                 print("{0:33} ==> {1:>33}".format(word, suggestion))
             else:
                 print("{0:33}".format(word))
@@ -74,7 +74,7 @@ class Typofinder(object):
                     continue
 
                 suggestion = self._result_map.get(word)
-                if suggestion is not None:
+                if suggestion:
                     line = line.replace(word, "[[%s ==> %s]]" % (word, suggestion))
                 else:
                     line = line.replace(word, "[[%s]]" % word)

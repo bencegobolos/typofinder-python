@@ -41,14 +41,19 @@ def get_arguments():
                             Find typos in every simple text file which can be
                             found in ../dir/. Use my-dict.json file instead of
                             htc-dictionary.json dictionary.
-      driver.py -e .adoc -e .txt /home/name/dir/
+      driver.py -e .adoc -e .txt /home/name/dir/ -t
                             Find typos in every .adoc and .txt extension simple
                             text file which can be found in /home/name/dir/.
-      driver.py -vv -e .tex ../../dir/usersguide/
+                            Print the unknown words and the suggestion in a
+                            table format.
+      driver.py -vv -e .tex ../../dir/usersguide/ -l -i htc
                             Find typos in .tex extension simple text file which
                             can be found in ../../dir/usersguide. Use max
                             level of verbosity (more additional info will be
-                            logged to standard error output).
+                            logged to standard error output). Print the
+                            lines with the unknown words. If the word 'htc' is
+                            found in a file it will not be marked as a typo
+                            even it is not in the dictionary.
     """)
     parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter,
                                      description=description,
@@ -62,6 +67,17 @@ def get_arguments():
                              'the known words (\'htc-dictionary.json\' is given by default).',
                         type=str, default=os.path.join(os.path.dirname(__file__), 'htc-dictionary.json'),
                         metavar='DICTIONARY_FILE')
+    parser.add_argument('-i', '--ignore',
+                        help='ignore a set of words when searching for typos. '
+                             'There words will not be added to the dictionary.',
+                        nargs='*', metavar='WORD')
+    parser.add_argument('-l', '--line',
+                        help='print to console the line where the typo was found.',
+                        action='store_true')
+    parser.add_argument('-t', '--table',
+                        help='print to console the result table containing the unknown words '
+                             'and the suggestions (if available).',
+                        action='store_true')
     parser.add_argument('input', help='A file or a directory you want to check.',
                         metavar='INPUT')
 
@@ -113,6 +129,11 @@ def main():
     linguist = Linguist()
     linguist.load_dictionary_from_json(args.dictionary)
 
+    if args.ignore:
+        add_word_list = [word.lower() for word in args.ignore]
+        linguist.train_dictionary(add_word_list)
+        _log.info("The following words will be ignored: %s." % ', '.join(add_word_list))
+
     if os.path.isdir(args.input):
         file_path_list = find_text_file_abs_paths(args.input, args.ext)
     else:
@@ -121,7 +142,10 @@ def main():
     for file_path in file_path_list:
         typofinder = Typofinder(linguist, file_path)
         typofinder.execute()
-        typofinder.print_affected_rows()
+        if args.line:
+            typofinder.print_affected_rows()
+        if args.table:
+            typofinder.print_result_map()
 
 if __name__ == "__main__":
     main()
