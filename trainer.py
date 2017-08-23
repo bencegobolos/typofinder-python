@@ -138,6 +138,7 @@ def main():
             file_path_list = [text_file_path]
 
         for file_path in file_path_list:
+            _log.debug("Training dictionary from file: \'%s\'" % file_path)
             linguist.train_dictionary(get_words(file(file_path).read()))
 
     if args.add:
@@ -160,8 +161,8 @@ def main():
 
         if added_words:
             print("New words to \'%s\': %s." % (dictionary_file_path, ', '.join(added_words)))
-
-        _log.info("No new words would be added to \'%s\'" % dictionary_file_path)
+        else:
+            _log.info("No new words would be added to \'%s\'" % dictionary_file_path)
     else:
         linguist.save_dictionary_to_json(dictionary_file_path)
 
