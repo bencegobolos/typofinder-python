@@ -14,7 +14,7 @@ def get_words(text):
     :param text: text string.
     :return: list of words found in text.
     """
-    return re.findall("[a-z]+", text.lower())
+    return re.findall("[a-zA-Z]+", text)
 
 
 def is_text_file(file_path, block_size=512):

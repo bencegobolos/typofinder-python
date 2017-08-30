@@ -78,6 +78,9 @@ def get_arguments():
                         help='print to console the result table containing the unknown words '
                              'and the suggestions (if available).',
                         action='store_true')
+    parser.add_argument('--overwrite',
+                        help='overwrite the checked file ',
+                        action='store_true')
     parser.add_argument('input', help='A file or a directory you want to check.',
                         metavar='INPUT')
 
@@ -146,6 +149,8 @@ def main():
             typofinder.print_affected_rows()
         if args.table:
             typofinder.print_result_map()
+        if args.overwrite:
+            typofinder.print_affected_rows(is_overwrite_mode=True)
 
 if __name__ == "__main__":
     main()

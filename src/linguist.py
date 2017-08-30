@@ -37,6 +37,8 @@ class Linguist(object):
 
         :param word_list: list of word which will be added to dictionary or increments it's likelihood.
         """
+        word_list = [word.lower() for word in word_list]
+
         if not word_list:
             _log.warning("No words will be added to dictionary: word list is empty.")
             return
@@ -53,6 +55,8 @@ class Linguist(object):
 
         :param word_list: list of words which will be deleted from dictionary.
         """
+        word_list = [word.lower() for word in word_list]
+
         if not word_list:
             _log.warning("No words will be deleted from dictionary: word list is empty.")
             return
@@ -113,6 +117,8 @@ class Linguist(object):
         :param word_set: A set of words which will be compared to the dictionary words.
         :return: A set of words which are not known from the dictionary.
         """
+        word_set = set([word.lower() for word in word_set])
+
         if not word_set:
             _log.info("There is no known word because the given word set is empty.")
             return set()

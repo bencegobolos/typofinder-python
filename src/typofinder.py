@@ -41,7 +41,7 @@ class Typofinder(object):
                 print("{0:33}".format(word))
         print("+" * 72 + "\n")
 
-    def print_affected_rows(self):
+    def print_affected_rows(self, is_overwrite_mode=False):
         """
         Prints the text file's lines (and it's numbers) where typos were detected.
         It is useful for logging information.
@@ -59,28 +59,37 @@ class Typofinder(object):
         for line in content:
             line_number += 1
 
-            # Lowering the line's words is necessary because the Linguist's dictionary
-            # contains the words in lowercase too.
-            line = line.lower()
             line_word_set = set(get_words(line))
             typo_list = self._result_map.keys()
 
-            if not line_word_set.intersection(typo_list):
+            # Lowering the line's words is necessary because the Linguist's dictionary
+            # contains the words in lowercase too.
+            if not set([word.lower() for word in line_word_set]).intersection(typo_list):
                 # Checking line is unnecessary because there is no unknown word. Skip to next line.
                 continue
 
             for word in line_word_set:
-                if word not in typo_list:
+                word_lowered = word.lower()
+                if word_lowered not in typo_list:
                     continue
 
-                suggestion = self._result_map.get(word)
+                suggestion = self._result_map.get(word_lowered)
                 if suggestion:
                     line = line.replace(word, "[[%s ==> %s]]" % (word, suggestion))
                 else:
                     line = line.replace(word, "[[%s]]" % word)
 
-            print("%d:%s" % (line_number, line.strip()))
-        print("")
+            if is_overwrite_mode:
+                content[line_number - 1] = line
+            else:
+                print("%d:%s" % (line_number, line.strip()))
+
+        if is_overwrite_mode:
+            with open(self._text_file_path, 'w') as f:
+                # The newline character is needed for the end of the file.
+                f.write("\n".join(content) + "\n")
+        else:
+            print("")
 
     def execute(self):
         """
