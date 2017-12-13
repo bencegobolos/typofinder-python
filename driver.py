@@ -153,4 +153,7 @@ def main():
             typofinder.print_affected_rows(is_overwrite_mode=True)
 
 if __name__ == "__main__":
+    if sys.version_info >= (3, 0):
+        sys.stdout.write("Sorry, requires Python 2.x, not Python 3.x\n")
+        sys.exit(1)
     main()
